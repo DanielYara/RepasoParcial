@@ -20,7 +20,7 @@ public class VideoStreamming {
     
     public String listarVideos(){
         String listaVideos = "";
-        for(Object video : videos){
+        for(Video video : videos){
             listaVideos += video;
         }
         return listaVideos;
