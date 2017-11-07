@@ -41,13 +41,18 @@ public class CargaArchivos {
                         videoStreaming.addVideo(serie);
                         //Si fuera composicion
                         videoStreaming.addVideo(capitulo, temporada, titulo, director, annio);
-                    } else if (tipo.equals(D)){
+                    } else if (tipo.equals("D")){
                         titulo = flujoEntrada.next().trim();
                         año = flujoEntrada.next().trim();
                         int annio = Integer.parseInt(año);
                         director = flujoEntrada.next().trim();
                         genero = flujoEntrada.next().trim();
-                    } else if(tipo.equals(P)){
+                        //Agregacion
+                        Documental d = new Documental(genero, titulo, director, annio);
+                        videoStreaming.addVideo(d);
+                        //Composicion
+                        videoStreaming.addVideo(genero, titulo, director, annio);
+                    } else if(tipo.equals("P")){
                         
                     }
                     
