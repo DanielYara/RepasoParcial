@@ -21,7 +21,7 @@ public class Serie extends Video{
 
     @Override
     public String retornarInformacion() {
-        return this.capitulo + this.temporada + super.toString();
+        return "capitulo: " +  this.capitulo + ",temporada: " + this.temporada + ", " + super.toString();
     }
 
     public int getCapitulo() {

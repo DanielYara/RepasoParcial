@@ -22,6 +22,35 @@ public abstract class Video {
     
     public abstract String retornarInformacion();
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    @Override
+    public String toString() {
+        return "Video{" + "titulo=" + titulo + ", director=" + director + ", a\u00f1o=" + año + '}';
+    }
+
     
     
 }

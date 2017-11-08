@@ -19,7 +19,7 @@ public class Documental extends Video{
 
     @Override
     public String retornarInformacion() {
-        return this.genero + "" + super.toString();
+        return "genero: " + this.genero + ", " + super.toString();
     }
 
     public String getGenero() {

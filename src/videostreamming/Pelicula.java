@@ -16,7 +16,7 @@ public class Pelicula extends Video{
 
     public Pelicula(String titulo, String director, int año) {
         super(titulo, director, año);
-        this.actores = actores;
+        this.actores = new ArrayList<>();
     }
     //Asociacion o agregacion
     public void addActor(Actor actor){
@@ -32,7 +32,8 @@ public class Pelicula extends Video{
     public String retornarInformacion() {
         String informacion = "";
         for(Actor actor : actores)
-            informacion += actor;
+            informacion += "nombre: " + actor.getNombre() + ", apellido: " +  actor.getApellidos() + " ";
+        informacion += super.toString();
         return informacion;
     }
 

@@ -14,27 +14,8 @@ import java.util.ArrayList;
 public class VideoStreamming {
     private ArrayList<Video> videos;
 
-    public VideoStreamming(ArrayList<Video> videos) {
-        this.videos = videos;
-    }
-    
-    public String listarVideos(){
-        String listaVideos = "";
-        for(Video video : videos){
-            listaVideos += video;
-        }
-        return listaVideos;
-    } 
-    
-    public ArrayList<Actor> listarActores(){
-        ArrayList<Actor> actores = new ArrayList<>();
-        for(Video video : videos){
-            if(video instanceof Pelicula){
-                Pelicula p = (Pelicula) video;
-                actores.addAll(p.getActores());
-            }
-        }
-        return actores;
+    public VideoStreamming() {
+        this.videos = new ArrayList<>();
     }
     
     //Para composicion

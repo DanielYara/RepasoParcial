@@ -19,7 +19,9 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         CargaArchivos carga = new CargaArchivos();
-        
+        carga.Cargar("videoStreamming.csv");
+        String videos = carga.listarVideos();
+        System.out.println(videos);
     }
     
 }
